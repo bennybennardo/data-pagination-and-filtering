@@ -113,7 +113,7 @@ function searchFunction( searchInput ) {
          showPage(searchResults, 1);
          addPagination(searchResults);
 
-      } else if ( searchResults.length === 0 ) {
+      } else if ( search.length !==0 && searchResults.length === 0 ) {
          document.querySelector('.student-list').innerHTML = `<center>No results found`;
          document.querySelector('.link-list').innerHTML = '';
       }

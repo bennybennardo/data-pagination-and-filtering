@@ -113,9 +113,13 @@ function searchFunction( searchInput ) {
          showPage(searchResults, 1);
          addPagination(searchResults);
 
-      } else if ( search.length !==0 && searchResults.length === 0 ) {
-         document.querySelector('.student-list').innerHTML = `<center>No results found`;
+      } else if ( search.length !== 0 && searchResults.length === 0 ) {
+         document.querySelector('.student-list').innerHTML = `<center>No results found</center>`;
          document.querySelector('.link-list').innerHTML = '';
+      } else if ( search.length === 0 ){
+         showPage( data, 1 )
+         addPagination(data);
+
       }
 
    }
